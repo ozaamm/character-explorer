@@ -12,6 +12,13 @@
     margin: 0 auto;
 }
 
+.noResults {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    color: white;
+}
+
 @media (min-width: 640px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
