@@ -35,31 +35,47 @@ export default function CharacterDetailPage({
   }
 
   return (
-    <div className={styles.characterDetail}>
-      <div className={styles.characterImageContainer}>
-        <div className={styles.characterImage}>
-          <Image 
-            src={character.fullbody_image} 
-            alt={character.name} 
-            fill
-            style={{ objectFit: 'contain', objectPosition: 'center' }}
-            priority
-          />
+    <div className={styles.characterPage}>
+      <div className={styles.characterDetail}>
+        <div className={styles.characterImageContainer}>
+          <div className={styles.characterImage}>
+            <Image 
+              src={character.fullbody_image} 
+              alt={character.name} 
+              fill
+              style={{ objectFit: 'contain', objectPosition: 'center' }}
+              priority
+            />
+          </div>
+        </div>
+
+        <div className={styles.infoContainer}>
+          <h1 className={styles.characterName}>{character.name}</h1>
+          <p className={styles.characterRealName}>{character.real_name}</p>
+          
+          <div className={styles.infoSection}>
+            <h2 className={styles.infoSectionTitle}>Role</h2>
+            <p className={styles.infoSectionContent}>{character.role}</p>
+          </div>
+          <div className={styles.infoSection}>
+            <h2 className={styles.infoSectionTitle}>Description</h2>
+            <p className={styles.infoSectionContent}>{character.description}</p>
+          </div>
         </div>
       </div>
-
-      <div className={styles.infoContainer}>
-        <h1 className={styles.characterName}>{character.name}</h1>
-        <p className={styles.characterRealName}>{character.real_name}</p>
-        
-        <div className={styles.infoSection}>
-          <h2 className={styles.infoSectionTitle}>Role</h2>
-          <p className={styles.infoSectionContent}>{character.role}</p>
-        </div>
-        <div className={styles.infoSection}>
-          <h2 className={styles.infoSectionTitle}>Description</h2>
-          <p className={styles.infoSectionContent}>{character.description}</p>
-        </div>
+      <div className={styles.abilitiesDetail}>
+        {character.abilities && character.abilities.length > 0 && (
+          <div className={styles.abilitiesContainer}>
+            <h2 className={styles.sectionTitle}>Abilities</h2>
+            <div className={styles.abilitiesList}>
+              {character.abilities.map((ability, index) => (
+                <div key={index} className={styles.abilityItem}>
+                  {ability}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
