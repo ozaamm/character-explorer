@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './CharacterCard.module.css';
+import OptimizedImage from './OptimizedImage';
 
 interface CharacterCardProps {
   id: string;
@@ -13,7 +13,7 @@ export default function CharacterCard({ id, name, role, thumbnailImage }: Charac
   return (
     <Link href={`/characters/${id}`} className={styles.card}>
       <div className={styles.imageContainer}>
-        <Image
+        <OptimizedImage
           src={thumbnailImage}
           alt={name}
           width={256}

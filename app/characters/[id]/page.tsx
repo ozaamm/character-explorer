@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import characters from '@/data/characters.json';
 import styles from './character-detail.module.css';
+import OptimizedImage from '@/components/OptimizedImage';
 
 export async function generateMetadata({ 
   params 
@@ -43,12 +43,10 @@ export default async function CharacterDetailPage({
       <div className={styles.characterDetail}>
         <div className={styles.characterImageContainer}>
           <div className={styles.characterImage}>
-            <Image 
-              src={character.fullbody_image} 
-              alt={character.name} 
+            <OptimizedImage
+              src={character.fullbody_image}
+              alt={character.name}
               fill
-              style={{ objectFit: 'contain', objectPosition: 'center' }}
-              priority
             />
           </div>
         </div>
