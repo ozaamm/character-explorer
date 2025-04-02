@@ -1,0 +1,56 @@
+[
+    {
+        "id": "captain-america",
+        "name": "Captain America",
+        "real_name": "Steven \"Steve\" Rogers",
+        "description": "Enhanced by the Super-Soldier Serum, Steven Rogers uses his Vibranium shield and extensive combat training to confront any threat to justice. When Captain America rallies his troops, a wave of courage sweeps across the battlefield!",
+        "role": "Vanguard",
+        "thumbnail_image": "/images/thumbnail/captain-america_thumbnail.png",
+        "fullbody_image": "/images/fullbody/captain-america_fullbody.png"
+    },
+    {
+        "id": "iron-man",
+        "name": "Iron Man",
+        "real_name": "Anthony \"Tony\" Stark",
+        "description": "Armed with superior intellect and a nanotech battlesuit of his own design, Tony Stark stands alongside gods as the Invincible Iron Man. His state of the art armor turns any battlefield into his personal playground, allowing him to steal the spotlight he so desperately desires.",
+        "role": "Duelist",
+        "thumbnail_image": "/images/thumbnail/iron-man_thumbnail.png",
+        "fullbody_image": "/images/fullbody/iron-man_fullbody.png"
+    },
+    {
+        "id": "loki",
+        "name": "Loki",
+        "real_name": "Loki Laufeyson",
+        "description": "What greater thrill is there for a God of Mischief than to outsmart his foes? The cunning trickster Loki uses his illusions and shapeshifting abilities to weave in and out of combat, toying with enemies at every turn.",
+        "role": "Strategist",
+        "thumbnail_image": "/images/thumbnail/loki_thumbnail.png",
+        "fullbody_image": "/images/fullbody/loki_fullbody.png"
+    },
+    {
+        "id": "luna-snow",
+        "name": "Luna Snow",
+        "real_name": "Seol Hee",
+        "description": "Equal parts pop star and Super Hero, Luna Snow puts on a dazzling show with both her light and dark ice powers. The arena is her stage, where Seol Hee and her team orchestrate spectacular displays that earn her an ever-increasing number of fans and wins.",
+        "role": "Strategist",
+        "thumbnail_image": "/images/thumbnail/luna-snow_thumbnail.png",
+        "fullbody_image": "/images/fullbody/luna-snow_fullbody.png"
+    },
+    {
+        "id": "spider-man",
+        "name": "Spider-Man",
+        "real_name": "Peter Benjamin Parker",
+        "description": "Swinging around the arena on his signature weblines, your friendly neighborhood Spider-Man, AKA Peter Parker, catches his rivals by surprise with sneaky, sticky bursts of webbing and unexpected attacks from above. Look out… here comes the Spider-Man!",
+        "role": "Duelist",
+        "thumbnail_image": "/images/thumbnail/spider-man_thumbnail.png",
+        "fullbody_image": "/images/fullbody/spider-man_fullbody.png"
+    },
+    {
+        "id": "thor",
+        "name": "Thor",
+        "real_name": "Thor Odinson",
+        "description": "The son of Odin taps into his divine power to call forth thunder and lightning, raining down relentless fury upon his enemies. With his mighty hammer Mjolnir in hand, Thor effortlessly asserts his dominance on the field of combat.",
+        "role": "Vanguard",
+        "thumbnail_image": "/images/thumbnail/thor_thumbnail.png",
+        "fullbody_image": "/images/fullbody/thor_fullbody.png"
+    }
+]
