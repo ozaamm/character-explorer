@@ -1,4 +1,5 @@
 import './globals.css';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -20,7 +21,7 @@ export default function RootLayout({
         <header className="header">
           <div className="header-container">
             <h1 className="header-title">
-              <a href="/" className="header-link">Marvel Rivals Character Explorer</a>
+              <Link href="/" className="header-link">Marvel Rivals Character Explorer</Link>
             </h1>
           </div>
         </header>
