@@ -27,6 +27,9 @@ export default function OptimizedImage({
     const imageRef = useRef<HTMLImageElement>(null);
 
     useEffect(() => {
+        // Reset loading state when the src changes
+        setIsLoading(true);
+        
         const checkImageLoad = () => {
             if (imageRef.current) {
                 const imgElement = imageRef.current;
@@ -39,8 +42,25 @@ export default function OptimizedImage({
         // Check immediately and after a short delay
         checkImageLoad();
         const timer = setTimeout(checkImageLoad, 100);
-
-        return () => clearTimeout(timer);
+        
+        // Add a load event listener to handle cases where loading takes longer than 100ms
+        const handleLoad = () => setIsLoading(false);
+        const handleError = () => setIsLoading(false); // Also handle errors
+        
+        const imgElement = imageRef.current;
+        if (imgElement) {
+            imgElement.addEventListener('load', handleLoad);
+            imgElement.addEventListener('error', handleError);
+        }
+        
+        return () => {
+            clearTimeout(timer);
+            // Clean up the event listeners
+            if (imgElement) {
+                imgElement.removeEventListener('load', handleLoad);
+                imgElement.removeEventListener('error', handleError);
+            }
+        };
     }, [src]);
 
     return (
