@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './home.module.css';
 import filterStyles from '../components/FiltersContainer.module.css';
 import CharacterCard from '../components/CharacterCard';

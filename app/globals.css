@@ -3,21 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #2a3441;
+  --background: #1f2833;
   --foreground: #ffffff;
-  --header-bg: #1f2937;
+  --header-bg: #334155;
   --header-text: #ffffff;
-  --card-bg: #ffffff;
-  --card-text: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --header-bg: #0a0a0a;
-    --header-text: #ffffff;
-  }
 }
 
 body {
