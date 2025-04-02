@@ -6,11 +6,13 @@ import filterStyles from '../components/FiltersContainer.module.css';
 import CharacterCard from '../components/CharacterCard';
 import SearchBar from '../components/SearchBar';
 import RoleFilter from '../components/RoleFilter';
+import SortFilter from '../components/SortFilter';
 import characters from '../data/characters.json';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedRole, setSelectedRole] = useState('');
+  const [sortOrder, setSortOrder] = useState('asc');
 
   // Extract unique roles for the filter
   const uniqueRoles = Array.from(new Set(characters.map(char => char.role)));
@@ -22,10 +24,14 @@ export default function Home() {
     return matchesSearch && matchesRole;
   });
 
-  // Sort characters alphabetically by name
-  const sortedCharacters = [...filteredCharacters].sort((a, b) =>
-    a.name.localeCompare(b.name)
-  );
+  // Sort characters by name
+  const sortedCharacters = [...filteredCharacters].sort((a, b) => {
+    if (sortOrder === 'asc') {
+      return a.name.localeCompare(b.name);
+    } else {
+      return b.name.localeCompare(a.name);
+    }
+  });
 
   const handleSearch = (term: string) => {
     setSearchTerm(term);
@@ -35,11 +41,16 @@ export default function Home() {
     setSelectedRole(role);
   };
 
+  const handleSortChange = (order: string) => {
+    setSortOrder(order);
+  };
+
   return (
     <main className={styles.container}>
       <div className={filterStyles.filtersContainer}>
         <SearchBar onSearch={handleSearch} />
         <RoleFilter onRoleChange={handleRoleChange} roles={uniqueRoles} />
+        <SortFilter onSortChange={handleSortChange} />
       </div>
 
       <div className={styles.grid}>

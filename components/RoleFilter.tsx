@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './RoleFilter.module.css';
+import filterStyles from './FiltersContainer.module.css';
 
 interface RoleFilterProps {
   onRoleChange: (role: string) => void;
@@ -21,7 +21,7 @@ export default function RoleFilter({ onRoleChange, roles }: RoleFilterProps) {
     <select 
       value={selectedRole}
       onChange={handleChange}
-      className={styles.select}
+      className={filterStyles.select}
     >
       <option value="">All Roles</option>
       {roles.map(role => (
