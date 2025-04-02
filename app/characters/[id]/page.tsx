@@ -23,11 +23,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function CharacterDetailPage({ 
+export default async function CharacterDetailPage({ 
   params 
 }: { 
   params: { id: string } 
 }) {
+
+  // Simulate a delay
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
+
   const character = characters.find(c => c.id === params.id);
 
   if (!character) {
