@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Marvel Rivals Character Explorer
 
-## Getting Started
+Next.js 15 web app that displays Marvel Rivals characters.
 
-First, run the development server:
+## What I did
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Instead of using the sample data, I created my own characters.json file with the help of Rivalskins database.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I went with a grid layout for the front page because I prefer the look of it. Each character card shows their thumbnail, name, role and clicking the card takes you to a dynamic character page, which shows more detailed info and a full body image of the character.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Completed Bonus Tasks:
+- Added search, role and sort by filters on the front page grid
+- Implemented static rendering for dynamic character pages
+- Created loading state for dynamic character pages (although I went with a very simplified version in the end)
+- Created a custom image component which uses loader spinners and made front page grid & character page images use the same component 
+- Built a responsive layout that works on mobile, tablet and desktop
+- Added some error handling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Challenges I ran into
 
-## Learn More
+- There was a bit of a learning curve with dynamic pages and optimizing images, but managed to figure them out.
+- Ran into some npm build issues specific to Next.js 15 that were frustrating to debug. AI wasnt really helpful with these at all, but was able to figure out the problems by checking public forums and next.js documentation.
 
-To learn more about Next.js, take a look at the following resources:
+## What I learned
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This was a really fun little project to work on especially with Marvel data! Coming from working mostly on older technologies like PHP, working with Next.js felt so modern and cool. I really enjoyed learning about it!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## With more time I would:
+- Clean up and centralize some of the CSS, and maybe learn more about tailwind. 
+- Improve UI elements and overall responsiveness between screen sizes, although I did focus on this quite a bit but didnt spend the time to make it "perfect".
